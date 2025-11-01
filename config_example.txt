@@ -1,0 +1,39 @@
+# 配置说明文件
+
+## 照片目录设置
+
+1. 创建 photos 目录：
+   mkdir photos
+
+2. 将自然照片复制到 photos 目录
+   - 支持格式：.jpg, .jpeg, .png, .bmp, .gif
+   - 建议使用高分辨率照片以获得最佳效果
+
+## 自定义配置
+
+打开 clock.py 文件，找到 SimpleClock 类的 __init__ 方法，可以修改：
+
+### 背景颜色
+- self.bg_color = (30, 30, 30)  # RGB值，范围0-255
+
+### 文字颜色
+- self.text_color = (255, 255, 255)  # 白色
+
+### 字体大小（自动根据屏幕高度计算）
+- self.clock_font_size = int(self.height * 0.15)  # 时钟字体
+- self.date_font_size = int(self.height * 0.05)  # 日期字体
+
+### 照片显示时间
+- self.photo_display_time = 10  # 秒
+
+### 照片缩放模式
+- "cover" - 覆盖整个屏幕（可能会裁剪照片）
+- "fit" - 适应屏幕（保持宽高比，可能有黑边）
+
+## 推荐设置
+
+- 分辨率：1920x1080 或更高
+- 照片数量：10-50 张为佳
+- 照片格式：JPEG（文件较小）
+- 显示时间：10-30 秒（根据照片数量调整）
+
